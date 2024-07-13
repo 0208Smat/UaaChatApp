@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ roomName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let message of messages">
+      <ion-label>
+        <h2>{{ message.username }}</h2>
+        <p>{{ message.text }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input type="text" placeholder="Ingresar mensaje" [(ngModel)]="newMessage"></ion-input>
+    <ion-button (click)="sendMessage()">Enviar</ion-button>
+  </ion-item>
+</ion-content>
+
+
+
