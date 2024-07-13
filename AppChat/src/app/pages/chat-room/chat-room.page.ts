@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-chat-room',
@@ -11,7 +12,7 @@ export class ChatRoomPage implements OnInit {
   newMessage: string = ''; 
   messages: { username: string, text: string }[] = [];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private navCtrl: NavController) {}
 
   ngOnInit() {
     const roomName = this.route.snapshot.paramMap.get('roomName');
@@ -29,6 +30,10 @@ export class ChatRoomPage implements OnInit {
     };
     this.messages.push(message);
     this.newMessage = '';
+  }
+
+  goBack(){
+    this.navCtrl.back();
   }
 }
 
