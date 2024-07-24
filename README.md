@@ -8,18 +8,18 @@ Proyecto final de intro a programación móvil, app de chat en sala grupal con l
 
 ## Instalación
 
-Instalar ProyectoFinal-AppChat con npm
+Instalar ProyectoFinal-AppChat con npm, luego de clonar el repositorio
 
 ```bash
-  npm install ProyectoFinal-AppChat
+  cd AppChat
+  npm install
 ```
     
 ## Despliegue
 
-Entrar en la carpeta, luego ejecutar con ionic
+Ejecutar con ionic
 
 ```bash
-  cd ProyectoFinal-AppChat
   ionic serve
 ```
 
